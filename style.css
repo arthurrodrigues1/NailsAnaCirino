@@ -17,19 +17,22 @@
     --fonte-naislanacirino: 'Playfair Display'
 }
 body{ 
-    background-color:var(--cor0);
+    background-color: var(--cor0);
     font-family: var(--fonte-padrao);
     margin: 0px;
     font-size: 20px;
     font-weight: 100;
 }
+
+/*HEADER*/
+
 header{
     min-height: 150px;
     border-radius: 0px;
     margin: auto;
     text-align: center;
     display: block;
-    background-image: linear-gradient(to top,var(--cor2),var(--cor1));
+    background-image:linear-gradient(to bottom,var(--cor1),var(--cor2));
     padding: 0px;
     margin: auto auto 10px auto;
 }
@@ -52,6 +55,9 @@ header  p{
     margin: auto;
     text-shadow: 1px 1px 0px black;
 }
+
+/*NAV*/
+
 nav{
     background-color:var(--cor2);
     padding: 5px;
@@ -70,6 +76,9 @@ nav > a:hover {
     box-shadow: inset 2px 2px 2px black;
     text-shadow: 2px 2px 0px rgba(0, 0, 0, 0.651);
 }
+
+/*MAIN*/
+
 main{
     color: var(--cor3);
     font-family: var(--fonte-padrao);
@@ -142,16 +151,43 @@ main  a.botaocontato {
     font-weight: bolder;
     box-shadow: 2px 2px 2px black;
 }
-main  img {
+
+/*GALERIA*/
+
+div.galeria {
+    color: var(--cor3);
+    font-family: var(--fonte-padrao);
+    text-align: justify;
+    padding: 0px 0px 30px 0px;
+    margin: auto;
+    max-width: 800px;
+    min-width: 320px;
+}
+div.galeria{
+    text-align: center;
+}
+div.galeria img{
     width: 30%;
     margin: 10px;
     background-color: var(--cor2);
     padding: 5px;
     border-radius: 10px;
 }
-main.galeria{
-    text-align: center;
+div.galeria img.thumbnail {
+    width: 150px; /* Defina o tamanho das miniaturas */
+    height: auto;
+    margin: 10px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
 }
+
+div.galeria img.thumbnail:hover {
+    transform: scale(2); /* Aumenta a escala em 20% quando hover */
+}
+
+
+/*FOOTER*/
+
 footer{
     background-image: linear-gradient(to bottom,var(--cor2),var(--cor1));
     color: var(--cor0);
