@@ -174,7 +174,7 @@ div.galeria img{
     border-radius: 10px;
 }
 div.galeria img.thumbnail {
-    width: 150px; /* Defina o tamanho das miniaturas */
+    width: 150px;  /* Define o tamanho das miniaturas */
     height: auto;
     margin: 10px;
     cursor: pointer;
@@ -182,7 +182,7 @@ div.galeria img.thumbnail {
 }
 
 div.galeria img.thumbnail:hover {
-    transform: scale(2); /* Aumenta a escala em 20% quando hover */
+    transform: scale(2); /* Aumenta a escala quando hover */
 }
 
 
