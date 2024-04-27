@@ -154,7 +154,7 @@ main  a.botaocontato {
 
 /*GALERIA*/
 
-div.galeria {
+div.gallery{
     color: var(--cor3);
     font-family: var(--fonte-padrao);
     text-align: justify;
@@ -163,17 +163,17 @@ div.galeria {
     max-width: 800px;
     min-width: 320px;
 }
-div.galeria{
+div.gallery{
     text-align: center;
 }
-div.galeria img{
+div.gallery img{
     width: 30%;
     margin: 10px;
     background-color: var(--cor2);
     padding: 5px;
     border-radius: 10px;
 }
-div.galeria img.thumbnail {
+div.gallery img.thumbnail {
     width: 150px;  /* Define o tamanho das miniaturas */
     height: auto;
     margin: 10px;
@@ -181,10 +181,28 @@ div.galeria img.thumbnail {
     transition: transform 0.3s ease;
 }
 
-div.galeria img.thumbnail:hover {
+div.gallery img.thumbnail:hover {
     transform: scale(2); /* Aumenta a escala quando hover */
 }
+.enlarged {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    background-color: rgba(0, 0, 0, 0.8);
+    z-index: 999;
+    cursor: pointer;
+}
 
+.enlarged img {
+    display: block;
+    margin: auto;
+    max-width: 90%;
+    max-height: 90%;
+    width: 500px;
+}
 
 /*FOOTER*/
 

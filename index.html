@@ -6,6 +6,26 @@
     <title>Nails Cirino - Home</title>
     <link rel="stylesheet" href="style.css">
     <link rel="shortcut icon" href="fotos/favicon.ico" type="image/x-icon">
+    <script>
+        // Seu código JavaScript aqui
+        document.addEventListener('DOMContentLoaded', function() {
+            const thumbnails = document.querySelectorAll('.thumbnail');
+
+            thumbnails.forEach(function(thumbnail) {
+                thumbnail.addEventListener('click', function() {
+                    const enlargedImageSrc = this.src;
+                    const enlargedImage = document.createElement('div');
+                    enlargedImage.classList.add('enlarged');
+                    enlargedImage.innerHTML = `<img src="${enlargedImageSrc}" alt="Enlarged Image">`;
+                    document.body.appendChild(enlargedImage);
+
+                    enlargedImage.addEventListener('click', function() {
+                        this.remove();
+                    });
+                });
+            });
+        });
+    </script>
 </head>
 <body>
     <header>
@@ -31,7 +51,7 @@
 
         <p>Oferecemos <a href="3Servicos.html">Serviços</a> de design de unhas personalizados e de alta qualidade, incluindo, alongamento, unhas de gel, e muito mais. Nosso objetivo é transformar suas unhas em obras de arte únicas que refletem sua personalidade e estilo.</p>
 
-        <div class="galeria">
+        <div class="gallery">
 
             <img src="fotos/unha do A preto.jpeg" alt="Unha preta com A" class="thumbnail">
 

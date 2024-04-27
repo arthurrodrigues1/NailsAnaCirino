@@ -6,6 +6,26 @@
     <title>Nails Cirino - Galeria</title>
     <link rel="stylesheet" href="style.css">
     <link rel="shortcut icon" href="fotos/favicon.ico" type="image/x-icon">
+    <script>
+        // Seu código JavaScript aqui
+        document.addEventListener('DOMContentLoaded', function() {
+            const thumbnails = document.querySelectorAll('.thumbnail');
+
+            thumbnails.forEach(function(thumbnail) {
+                thumbnail.addEventListener('click', function() {
+                    const enlargedImageSrc = this.src;
+                    const enlargedImage = document.createElement('div');
+                    enlargedImage.classList.add('enlarged');
+                    enlargedImage.innerHTML = `<img src="${enlargedImageSrc}" alt="Enlarged Image">`;
+                    document.body.appendChild(enlargedImage);
+
+                    enlargedImage.addEventListener('click', function() {
+                        this.remove();
+                    });
+                });
+            });
+        });
+    </script>
 </head>
 <body>
     <header>
@@ -23,7 +43,7 @@
         </nav>        
     </header>
     <main>
-        <div class="galeria">
+        <div class="gallery">
 
             <img src="fotos/unha A preta e dourada2.jpeg" alt="unha A preta e dourada" class="thumbnail">
 
